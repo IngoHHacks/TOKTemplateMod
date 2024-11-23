@@ -30,10 +30,10 @@
     
     <ItemGroup>
       <Reference Include="0Harmony">
-        <HintPath>..\..\..\..\..\Assets\Plugins\Harmony\0Harmony.dll</HintPath>
+        <HintPath>lib\0Harmony.dll</HintPath>
       </Reference>
       <Reference Include="Assembly-CSharp">
-        <HintPath>..\..\..\..\..\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
+        <HintPath>lib\Assembly-CSharp.dll</HintPath>
       </Reference>
     </ItemGroup>
 </Project>
