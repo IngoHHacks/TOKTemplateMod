@@ -19,14 +19,15 @@ namespace TemplateDllMod
         
         public override void LoadContent()
         {
-            var piece = PieceAPI.BeginBuildPiece("testing", "test4");
-            piece.WithMovement(Pieces.All["queen"].Movement);
-            piece.WithSprites("kingd_w.png", "kingd_b.png", "king_outline.png");
-            piece.WithDescription("Fake King", "This is a test piece.", "A queen disguised as a king.");
-            piece.WithValue(1);
-            piece.WithPrice(0);
-            piece.WithPlayerProb(1000);
-            piece.WithEnemyProbs((0, 1000));
+            var piece = PieceAPI.BeginBuildPiece("testing", "test4")
+                .WithMovement(Pieces.All["queen"].Movement)
+                .WithSprites("kingd_w.png", "kingd_b.png", "king_outline.png")
+                .WithDescription("Fake King", "This is a test piece.", "A queen disguised as a king.")
+                .WithValue(1)
+                .WithPrice(0)
+                .WithPlayerProb(1000)
+                .WithEnemyProbs((0, 5), (1, 10), (2, 15), (3, 20), (4, 20));
+                
             piece.BuildPiece();
             
             var piece2 = PieceAPI.BeginBuildPiece("TOK", "king");
